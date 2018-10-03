@@ -1,4 +1,4 @@
-/*
+/**
 Source : http://www.vogella.com/tutorials/AndroidRecyclerView/article.html#exercise-using-recyclerview-in-a-new-android-application
 */
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         // of the RecyclerView
         recyclerView.setHasFixedSize(true);
 
-        // Si on souhaite une list esimple, utiliser un linear layout manager
+        // Si on souhaite une liste simple, utiliser un linear layout manager
         //layoutManager = new LinearLayoutManager(this);
 
         // Si on souhaite une grille, utiliser un grid layout manager
