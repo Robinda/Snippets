@@ -33,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mContext = getApplicationContext();
-
         random = new Random();
-
         getDatalist = new ArrayList<>();
+        
         for (int aind = 0 ; aind < 20; aind++) {
             HashMap<String,String> map = new HashMap<>();
             map.put("KEY_EMAIL","android" + aind + "@gmail.com");
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     mEmail = item.get("KEY_EMAIL");
                     mPhone = item.get("KEY_PHONE");
                 }
-				catch (Exception ev) {
+                catch (Exception ev) {
                     System.out.print(ev.getMessage());
                 }
                 Toast.makeText(mContext, "Clicked row: \nEmail: " + mEmail + ", Phone: " + mPhone, Toast.LENGTH_LONG).show();
@@ -106,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     }, 5000);
-                } 
-				else {
+                }
+                else {
                     Toast.makeText(mContext, "Loading data completed", Toast.LENGTH_SHORT).show();
                 }
             }
