@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         random = new Random();
         getDatalist = new ArrayList<>();
         
-        for (int aind = 0 ; aind < 20; aind++) {
+        for (int i = 0 ; i < 20; i++) {
             HashMap<String,String> map = new HashMap<>();
-            map.put("KEY_EMAIL","android" + aind + "@gmail.com");
+            map.put("KEY_EMAIL","android" + i + "@gmail.com");
             map.put("KEY_PHONE",phoneNumberGenerating());
             getDatalist.add(map);
         }
@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLoadMore() {
                 if (getDatalist.size() <= 40) {
-
                     // On ajoute "null" à la liste de manière à ce que la méthode getItemViewType de l'adapter renvoie
                     // un type égal à "VIEW_TYPE_LOADING", et qu'ainsi le onBindViewHolder affiche la ProgressBar
                     getDatalist.add(null);
@@ -102,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
                             // On met le flag de loading à false
                             mAdapter.setLoaded();
-
                         }
                     }, 5000);
                 }
