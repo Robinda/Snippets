@@ -1,3 +1,9 @@
+/**
+RecyclerView dynamically load more items when scroll to end with bottom ProgressBar:
+http://www.androidlearningtutorials.com/blog_details.php?article_id=12
+http://www.devexchanges.info/2017/02/android-recyclerview-dynamically-load.html
+*/
+
 package com.example.robin.demoapp;
 
 import android.content.Context;
@@ -31,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         random = new Random();
 
         getDatalist = new ArrayList<>();
-        for(int aind = 0 ; aind < 20; aind++){
+        for (int aind = 0 ; aind < 20; aind++) {
             HashMap<String,String> map = new HashMap<>();
             map.put("KEY_EMAIL","android" + aind + "@gmail.com");
             map.put("KEY_PHONE",phoneNumberGenerating());
@@ -100,12 +106,12 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     }, 5000);
-                } else {
+                } 
+				else {
                     Toast.makeText(mContext, "Loading data completed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
     }
 
     private String phoneNumberGenerating() {
