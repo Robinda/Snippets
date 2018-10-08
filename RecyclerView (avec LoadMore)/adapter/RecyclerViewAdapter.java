@@ -1,6 +1,5 @@
 package com.example.robin.demoapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -51,7 +50,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public RecyclerViewAdapter(AppCompatActivity activity, Context context, ArrayList<HashMap<String, String>> myDataset, RecyclerView recyclerView) {
+    public RecyclerViewAdapter(AppCompatActivity activity, Context context, ArrayList<HashMap<String,
+            String>> myDataset, RecyclerView recyclerView) {
 
         mcontext = context;
         mactivity = activity;
@@ -59,21 +59,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         // Load more
         final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-        
-		recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                
-				totalItemCount = linearLayoutManager.getItemCount();
+
+                totalItemCount = linearLayoutManager.getItemCount();
                 lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
                 
 				if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
                     if (onLoadMoreListener != null) {
                         onLoadMoreListener.onLoadMore();
                     }
-                    
-					isLoading = true;
+
+                    isLoading = true;
                 }
             }
         });
@@ -85,8 +85,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         if (viewType == VIEW_TYPE_ITEM) {
             View view = LayoutInflater.from(mactivity).inflate(R.layout.recycler_view_item_row, parent, false);
             return new ViewHolderRow(view);
-        } 
-		else if (viewType == VIEW_TYPE_LOADING) {
+        }
+        else if (viewType == VIEW_TYPE_LOADING) {
             View view = LayoutInflater.from(mactivity).inflate(R.layout.item_progressbar, parent, false);
             return new ViewHolderLoading(view);
         }
@@ -110,8 +110,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
             // binding item click listner
             userViewHolder.bind(mDataset.get(position), listener);
-        } 
-		else if (holder instanceof ViewHolderLoading) {
+        }
+        else if (holder instanceof ViewHolderLoading) {
             ViewHolderLoading loadingViewHolder = (ViewHolderLoading) holder;
             loadingViewHolder.progressBar.setIndeterminate(true);
         }
