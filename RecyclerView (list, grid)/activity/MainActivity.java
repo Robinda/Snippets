@@ -17,19 +17,16 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
+    private GridLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        // use this setting to
-        // improve performance if you know that changes
-        // in content do not change the layout size
-        // of the RecyclerView
+        // Use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true);
 
         // Si on souhaite une liste simple, utiliser un linear layout manager
