@@ -67,8 +67,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
                 totalItemCount = linearLayoutManager.getItemCount();
                 lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
-                
-				if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
+
+                if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
                     if (onLoadMoreListener != null) {
                         onLoadMoreListener.onLoadMore();
                     }
