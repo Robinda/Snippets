@@ -1,4 +1,6 @@
-package com.journaldev.recyclerviewdividersandselectors;
+/**
+Source : https://www.journaldev.com/15035/recyclerview-android-dividers-contextual-toolbar
+*/
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -16,16 +18,14 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.view.View.GONE;
-
 public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.ClickAdapterListener {
 
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     ArrayList<Model> dataModel;
     RecyclerViewAdapter mAdapter;
-    private ActionModeCallback actionModeCallback;
-    private ActionMode actionMode;
+    ActionModeCallback actionModeCallback;
+    ActionMode actionMode;
     FloatingActionButton fab;
     Boolean flagAllSelected;
 
