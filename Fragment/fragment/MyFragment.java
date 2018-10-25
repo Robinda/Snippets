@@ -40,8 +40,8 @@ public class MyFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if(context instanceof FragmentListener){
-            fragmentCallback = (FragmentListener)context;
+        if(context instanceof FragmentListener) {
+            fragmentCallback = (FragmentListener) context;
         }
     }
 
