@@ -1,0 +1,52 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quickreturn_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- 
+		L’AppBarLayout est un LinearLayout vertical qui implémente beaucoup de concept du 
+		material design pour les barres d’actions et cela notamment lors du scroll. 
+		Chaque composant (élément fils) de l’AppBarLayout doit indiquer la manière dont il 
+		souhaite se comporter lors du scroll et cela soit à l’aide de la méthode setScrollFlags 
+		ou l’attribut app:layout_scrollFlags.
+		
+		Pour que tous les comportements de l’AppBarLayout se comporte de la manière souhaités, 
+		il doit être utilisé en combinaison avec le CoordinatorLayout. Ainsi, qu’un élément 
+		scrollable (ListView, RecyclerView) déclaré dans le CoordinatorLayout mais à 
+		l’extérieur de l’AppBarLayout. 
+	-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+		<!-- 
+			Ici on utilise un thème spécifique (android:theme="@style/ToolbarTheme"),
+			ainsi qu'un ScrollFlag (app:layout_scrollFlags="scroll|enterAlways").
+			On override localement le background, sans cela c'est la couleur du thème qui serait appliquée.
+		-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#d14108"
+            android:elevation="4dp"
+            android:theme="@style/ToolbarTheme"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    </android.support.design.widget.AppBarLayout>
+
+	<!-- 
+		Lorsqu'on va scroller la liste, la toolbar va également remonter 
+		à l'écran et disparaitre totalement (grâce à l'attribut "layout_behavior") 
+	-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_favorites_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

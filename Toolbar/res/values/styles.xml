@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Thème de base de l'application -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+    </style>
+
+	<!-- 
+		Sous-thème "NoActionBar" : utilisé quand on supprime l'ActionBar pour mettre une Toolbar à la place.
+		
+		Lorsqu'on va définir une Toolbar dans un layout.xml :
+			- Si on ne défini pas explicitement de thème à la Toolbar, elle aura un Style tel que défini ci-dessous (par défaut). 
+			  On pourra malgré tout définir localement (dans le layout.xml) des attributs spécifiques à la Toolbar, comme la coleur du texte, du background, etc.
+			
+			- Si on spécifie un thème à la Toolbar (ex: android:theme="@style/ToolbarTheme"), elle aura les spécifités du 
+				thème ci-dessous, mais également celles définies dans le Thème en question (ici "ToolbarTheme")	
+	-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+		<!-- Couleur utilisée lorsqu'on passe en Mode Action pour la séléction d'items dans une liste/grille (Contextual Action Bar) -->
+        <item name="android:actionModeBackground">#e6005c</item>
+    </style>
+
+	<!-- Thème spécifique pour la Toolbar avec divers attributs -->
+    <style name="ToolbarTheme" parent="AppTheme.NoActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">#66b3ff</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">#cc99ff</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">#ffcc66</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">#b30059</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">#39e600</item>
+        <!--Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">#009999</item>
+        <!-- Trigger a ripple effect when clicking icons-->
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+	
+	<!-- Thèmes obligatoires pour le Navigation Drawer (Menu de navigation) -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
