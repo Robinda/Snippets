@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d4594c">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_message_typed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#747474"
+        android:textSize="16sp"
+        android:inputType="textAutoCorrect"
+        android:hint="Message..."
+        android:layout_margin="20dp"
+        android:maxWidth="50dp"
+        android:maxLines="1"
+        android:background="#fff"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#fff"
+        android:layout_marginTop="16dp"
+        android:text="Valider" />
+
+</LinearLayout>
