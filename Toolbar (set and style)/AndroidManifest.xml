@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
 
-	<!-- On dÃ©finit la thÃ¨me gÃ©nÃ©ral de l'appli (android:theme="@style/AppTheme") -->
+	<!-- On définit la thème général de l'appli (android:theme="@style/AppTheme") -->
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-		<!-- Pour chaque activitÃ© on l'ou souhaite utiliser une Toolbar, on doit appliquer le thÃ¨me NoActionBar (android:theme="@style/AppTheme.NoActionBar") -->
+	<!-- Pour chaque activité on l'ou souhaite utiliser une Toolbar, on doit appliquer le thème NoActionBar (android:theme="@style/AppTheme.NoActionBar") -->
         <activity
             android:name=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
@@ -29,7 +29,7 @@
         </activity>
 
         <activity 
-			android:name=".activity.SecondaryActivity"
+		android:name=".activity.SecondaryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
     </application>

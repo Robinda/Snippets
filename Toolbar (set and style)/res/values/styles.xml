@@ -9,14 +9,14 @@
     </style>
 
 	<!-- 
-		Sous-thème "NoActionBar" : utilisé quand on supprime l'ActionBar pour mettre une Toolbar à la place.
+	Sous-thème "NoActionBar" : utilisé quand on supprime l'ActionBar pour mettre une Toolbar à la place.
+	
+	Lorsqu'on va définir une Toolbar dans un layout.xml :
+		- Si on ne défini pas explicitement de thème à la Toolbar, elle aura un Style tel que défini ci-dessous (par défaut). 
+		  On pourra malgré tout définir localement (dans le layout.xml) des attributs spécifiques à la Toolbar, comme la coleur du texte, du background, etc.
 		
-		Lorsqu'on va définir une Toolbar dans un layout.xml :
-			- Si on ne défini pas explicitement de thème à la Toolbar, elle aura un Style tel que défini ci-dessous (par défaut). 
-			  On pourra malgré tout définir localement (dans le layout.xml) des attributs spécifiques à la Toolbar, comme la coleur du texte, du background, etc.
-			
-			- Si on spécifie un thème à la Toolbar (ex: android:theme="@style/ToolbarTheme"), elle aura les spécifités du 
-				thème ci-dessous, mais également celles définies dans le Thème en question (ici "ToolbarTheme")	
+		- Si on spécifie un thème à la Toolbar (ex: android:theme="@style/ToolbarTheme"), elle aura les spécifités du 
+			thème ci-dessous, mais également celles définies dans le Thème en question (ici "ToolbarTheme")	
 	-->
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
