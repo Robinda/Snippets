@@ -25,9 +25,9 @@ public class MyDialogFragment extends DialogFragment {
     private DialogListener mDialogListener;
     private TextView mTvDialogTitle, mTvDialogMessage, mTvDialogActionPositive, mTvDialogActionNegative;
 
-	/**
-	* Interface de communication entre la DialogBox et l'activité parente
-	*/
+    /**
+     * Interface de communication entre la DialogBox et l'activité parente
+     */
     public interface DialogListener {
         void onConfirm(int result);
     }
@@ -39,7 +39,7 @@ public class MyDialogFragment extends DialogFragment {
     }
 
     public static MyDialogFragment newInstance(String title, String message, String positiveButton,
-                                                  String negativeButton, Boolean isCancelable) {
+                                               String negativeButton, Boolean isCancelable) {
         MyDialogFragment frag = new MyDialogFragment();
 
         Bundle args = new Bundle();
@@ -52,8 +52,8 @@ public class MyDialogFragment extends DialogFragment {
 
         return frag;
     }
-	
-	@Override
+
+    @Override
     public void onStart() {
         super.onStart();
     }
@@ -75,8 +75,8 @@ public class MyDialogFragment extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_my_dialog, container, true);
-		
-		// Remove title bar
+
+        // Remove title bar
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
         // Make dialog cancelable or not
         setCancelable(getArguments().getBoolean(DIALOG_IS_CANCELABLE, true));
@@ -87,8 +87,8 @@ public class MyDialogFragment extends DialogFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        
-		mTvDialogTitle = view.findViewById(R.id.tv_dialog_title_value);
+
+        mTvDialogTitle = view.findViewById(R.id.tv_dialog_title_value);
         mTvDialogMessage = view.findViewById(R.id.tv_dialog_message_value);
         mTvDialogActionPositive = view.findViewById(R.id.tv_button_positive_action);
         mTvDialogActionNegative = view.findViewById(R.id.tv_button_negative_action);
@@ -98,14 +98,14 @@ public class MyDialogFragment extends DialogFragment {
         String positiveButton = getArguments().getString(POSITIVE_BUTTON_VALUE, "");
         String negativeButton = getArguments().getString(NEGATIVE_BUTTON_VALUE, "");
 
-        if (title.isEmpty()) {
+        if(title.isEmpty()) {
             mTvDialogTitle.setVisibility(View.GONE);
         }
         else {
             mTvDialogTitle.setText(title);
         }
 
-        if (message.isEmpty() || positiveButton.isEmpty() || negativeButton.isEmpty()) {
+        if(message.isEmpty() || positiveButton.isEmpty() || negativeButton.isEmpty()) {
             dismiss();
             return;
         }
@@ -118,7 +118,7 @@ public class MyDialogFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 dismiss();
-                if (mDialogListener != null) {
+                if(mDialogListener != null) {
                     mDialogListener.onConfirm(DIALOG_RESULT_NEGATIVE);
                 }
             }
@@ -128,7 +128,7 @@ public class MyDialogFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
                 dismiss();
-                if (mDialogListener != null) {
+                if(mDialogListener != null) {
                     mDialogListener.onConfirm(DIALOG_RESULT_POSITIVE);
                 }
             }
@@ -138,5 +138,5 @@ public class MyDialogFragment extends DialogFragment {
     @Override
     public void onDetach() {
         super.onDetach();
-    }    
+    }
 }
