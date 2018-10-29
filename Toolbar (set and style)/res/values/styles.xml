@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-		<item name="colorAccent">@color/colorAccent</item>
+	<item name="colorAccent">@color/colorAccent</item>
         <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
     </style>
 
@@ -22,7 +22,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionModeOverlay">true</item>
-		<!-- Couleur utilisée lorsqu'on passe en Mode Action pour la séléction d'items dans une liste/grille (Contextual Action Bar) -->
+	<!-- Couleur utilisée lorsqu'on passe en Mode Action pour la séléction d'items dans une liste/grille (Contextual Action Bar) -->
         <item name="android:actionModeBackground">#e6005c</item>
     </style>
 
