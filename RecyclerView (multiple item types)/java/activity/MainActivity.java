@@ -1,6 +1,6 @@
 /*
- * Dans cet exemple, on crée une liste contenant 2 types d'objet (Vehicle et Shop).
- * Suivant le type d'objet, l'adapter affiche une liste avec des layouts différents (row_vehicle ou 
+ * Dans cet exemple, on crée une liste contenant 2 types d'objets (Vehicle et Shop).
+ * Suivant le type d'objet, l'adapter affiche une liste avec des layouts différents (row_vehicle ou
  * row_shop) et leurs widgets associés
  */
 package com.example.robin.demoapp.test;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Création d'une liste contenant des objets génériques
-	 * @return ArrayList<Object> Liste
+     * @return ArrayList<Object> Liste d'objets
      */
     private ArrayList<Object> createFakeData() {
         ArrayList<Object> arrayList = new ArrayList<>();
