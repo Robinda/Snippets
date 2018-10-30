@@ -1,6 +1,7 @@
 /*
  * Dans cet exemple, on crée une liste contenant 2 types d'objet (Vehicle et Shop).
- * Suivant le type d'objet, l'adapter affiche une liste avec des layouts différents (row_vehicle ou row_shop) et leurs widgets associés
+ * Suivant le type d'objet, l'adapter affiche une liste avec des layouts différents (row_vehicle ou 
+ * row_shop) et leurs widgets associés
  */
 package com.example.robin.demoapp.test;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true);
 
-        // Si on souhaite une liste simple, utiliser un linear layout manager
+        // Affichage sous forme de liste
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         // Set layout manager to RecyclerView
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Création d'une liste
+     * Création d'une liste contenant des objets génériques
+	 * @return ArrayList<Object> Liste
      */
     private ArrayList<Object> createFakeData() {
         ArrayList<Object> arrayList = new ArrayList<>();
