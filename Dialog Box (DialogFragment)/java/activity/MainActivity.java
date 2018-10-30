@@ -20,13 +20,14 @@ public class MainActivity extends AppCompatActivity implements MyDialogFragment.
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getFragmentManager();
-                MyDialogFragment MyDialogFragment = MyDialogFragment.newInstance("Confirmation du vol",
+                MyDialogFragment dialogBox = MyDialogFragment.newInstance("Confirmation du vol",
                         "Etes-vous sûr de vouloir confirmer le Vol 714 pour Sydney ?",
                         "Confirmer",
                         "Annuler",
                         false);
 						
-                MyDialogFragment.show(fm, "tag_dialog_fragment");
+                dialogBox.show(fm, "tag_dialog_box");
+                dialogBox.setDialogListener(this);				
             }
         });
     }

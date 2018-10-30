@@ -30,6 +30,14 @@ public class MyDialogFragment extends DialogFragment {
      */
     public interface DialogListener {
         void onConfirm(int result);
+    }	
+	
+    /**
+     * Initialisation du listener
+     * @param listener
+     */
+    public void setDialogListener(DialogListener listener) {
+        this.mDialogListener = listener;
     }
 
     public MyDialogFragment() {
@@ -61,10 +69,6 @@ public class MyDialogFragment extends DialogFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
-        if(context instanceof DialogListener){
-            mDialogListener = (DialogListener) context;
-        }
     }
 
     @Override
