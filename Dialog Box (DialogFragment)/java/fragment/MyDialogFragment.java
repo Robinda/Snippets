@@ -134,7 +134,7 @@ public class DialogYesNoFragment extends DialogFragment {
         }
         // Icone par défaut
         else {
-            mIvDialogTitleIcon.setImageResource(R.drawable.ic_menu_share);
+            mIvDialogTitleIcon.setImageResource(R.drawable.ic_dialog_box_default);
         }
 
         if (title.isEmpty()) {
