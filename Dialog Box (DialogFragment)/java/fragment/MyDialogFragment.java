@@ -53,8 +53,18 @@ public class DialogYesNoFragment extends DialogFragment {
         // Empty constructor is required for DialogFragment
         // Make sure not to add arguments to the constructor
         // Use `newInstance` instead as shown below
-    }
-
+    }	
+	
+    /**
+     * Constructeur
+     * @param iconResourceId Id de la resource, 0 si pas d'icone, -1 si icone par defaut
+     * @param title Titre de la dialogBox (masqué si vide)
+     * @param message Message de la dialogBox
+     * @param positiveButton Texte du bouton d'action positive
+     * @param negativeButton Texte du bouton d'action négative
+     * @param isCancelable True si la dialogBox est cancelable
+     * @return DialogYesNoFragment
+     */
     public static DialogYesNoFragment newInstance(int iconResourceId, String title, String message,
                                                   String positiveButton, String negativeButton, Boolean isCancelable) {
         DialogYesNoFragment frag = new DialogYesNoFragment();
